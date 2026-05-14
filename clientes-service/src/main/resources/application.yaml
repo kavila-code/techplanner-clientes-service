@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: clientes-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/techplanner
+    username: admin
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
