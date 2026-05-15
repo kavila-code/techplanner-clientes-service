@@ -1,0 +1,8 @@
+.dockerignore
+target
+!target/*-SNAPSHOT.jar
+.mvn
+mvnw
+.git
+.gitignore
+test_output.txt

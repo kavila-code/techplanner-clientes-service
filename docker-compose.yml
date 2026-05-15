@@ -16,5 +16,20 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  clientes-service:
+    build:
+      context: ./clientes-service
+      dockerfile: Dockerfile
+    container_name: techplanner-clientes
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/techplanner
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+
 volumes:
   postgres_data:
