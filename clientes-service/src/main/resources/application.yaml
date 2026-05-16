@@ -9,8 +9,21 @@ spring:
     url: jdbc:postgresql://localhost:5432/techplanner
     username: admin
     password: admin
+    hikari:
+      minimumIdle: 2
+      maximumPoolSize: 10
+      poolName: HikariPool
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+# Spring Actuator / management
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
