@@ -16,11 +16,11 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  clientes-service:
+  techplanner-clientes-service:
     build:
       context: ./clientes-service
       dockerfile: Dockerfile
-    container_name: techplanner-clientes
+    container_name: techplanner-clientes-service
     depends_on:
       - postgres
     environment:

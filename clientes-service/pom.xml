@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.techplanner</groupId>
-	<artifactId>clientes-service</artifactId>
+	<artifactId>techplanner-clientes-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name />
+	<name>techplanner-clientes-service</name>
 	<description />
 	<url />
 	<licenses>
