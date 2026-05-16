@@ -47,6 +47,7 @@ public class ClienteController {
                 .map(existente -> {
                     existente.setNombre(cliente.getNombre());
                     existente.setEmail(cliente.getEmail());
+                    existente.setRol(cliente.getRol() != null ? cliente.getRol() : existente.getRol());
                     return ResponseEntity.ok(clienteService.guardar(existente));
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
