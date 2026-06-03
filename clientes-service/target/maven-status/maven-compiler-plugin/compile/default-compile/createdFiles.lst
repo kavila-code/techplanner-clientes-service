@@ -1,1 +1,12 @@
 com\techplanner\clientes_service\ClientesServiceApplication.class
+com\techplanner\clientes_service\domain\entity\RolCliente.class
+com\techplanner\clientes_service\domain\exception\ClienteServiceException.class
+com\techplanner\clientes_service\domain\service\ClienteService.class
+com\techplanner\clientes_service\delivery\dto\ClienteRequest.class
+com\techplanner\clientes_service\domain\entity\Cliente.class
+com\techplanner\clientes_service\delivery\controller\ClienteController.class
+com\techplanner\clientes_service\delivery\handler\GlobalExceptionHandler.class
+com\techplanner\clientes_service\delivery\dto\ClienteResponse.class
+com\techplanner\clientes_service\domain\exception\ClienteNotFoundException.class
+com\techplanner\clientes_service\domain\repository\ClienteRepository.class
+com\techplanner\clientes_service\delivery\mapper\ClienteMapper.class

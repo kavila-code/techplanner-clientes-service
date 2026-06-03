@@ -5,10 +5,16 @@ spring:
   application:
     name: techplanner-clientes-service
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/techplanner
+
   datasource:
-    url: jdbc:postgresql://localhost:5432/techplanner
-    username: admin
-    password: admin
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/techplanner}
+    username: ${SPRING_DATASOURCE_USERNAME:admin}
+    password: ${SPRING_DATASOURCE_PASSWORD:admin}
     hikari:
       minimumIdle: 2
       maximumPoolSize: 10
@@ -18,6 +24,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+      platform: postgresql
 
 # Spring Actuator / management
 management:
